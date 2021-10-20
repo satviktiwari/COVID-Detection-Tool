@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <title>COVID-19 Symptoms Based Detection Tool</title>
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://covid19-detection.netlify.app/">COVID Detection Tool</a>
+      <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>-->
+      <!--
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>-->
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    
+    </div>
+  </nav><br>
+
+  <h1 class="text-center" style="color:rgb(41, 34, 34)";>Fill the form below:</h1><hr>
+
+  <form name="quiz" id="quiz">
+    <div class="container">
+      <div>
+        <h4>➜ Select Your Gender:</h4>
+        <h6><input type="radio" name="q1" value="a"> A. Male</h6>
+        <h6><input type="radio" name="q1" value="b"> B. Female</h6>
+        <h6><input type="radio" name="q1" value="c"> C. Others</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ What is your body temprature:</h4>
+        <h6><input type="radio" name="q2" value="a"> A. Less than 98</h6>
+        <h6><input type="radio" name="q2" value="b"> B. Between 98 and 100</h6>
+        <h6><input type="radio" name="q2" value="c"> C. Between 100 and 102</h6>
+        <h6><input type="radio" name="q2" value="d"> D. Above 102</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having difficulty in breathing:</h4>
+        <h6><input type="radio" name="q3" value="a"> A. Yes, sevearly</h6>
+        <h6><input type="radio" name="q3" value="b"> B. Yes, partially</h6>
+        <h6><input type="radio" name="q3" value="c"> C. No</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Do you have any travel history in last 15 days:</h4>
+        <h6><input type="radio" name="q4" value="a"> A. Yes, International travel</h6>
+        <h6><input type="radio" name="q4" value="b"> B. Yes, Domestic travel</h6>
+        <h6><input type="radio" name="q4" value="c"> C. No travel history</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having Bodypain:</h4>
+        <h6><input type="radio" name="q5" value="a"> A. Yes, Severe Body Pain</h6>
+        <h6><input type="radio" name="q5" value="b"> B. Yes, Mild Body Pain</h6>
+        <h6><input type="radio" name="q5" value="c"> C. No Body Pain</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having Cough:</h4>
+        <h6><input type="radio" name="q6" value="a"> A. Yes, Severe Cough</h6>
+        <h6><input type="radio" name="q6" value="b"> B. Yes, Mild Cough</h6>
+        <h6><input type="radio" name="q6" value="c"> C. No Cough</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having Throat pain:</h4>
+        <h6><input type="radio" name="q7" value="a"> A. Yes, Severe Throat Pain</h6>
+        <h6><input type="radio" name="q7" value="b"> B. Yes, Mild Throat Pain</h6>
+        <h6><input type="radio" name="q7" value="c"> C. No Throat Pain</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having Headache:</h4>
+        <h6><input type="radio" name="q8" value="a"> A. Yes, Severe Headache</h6>
+        <h6><input type="radio" name="q8" value="b"> B. Yes, Mild Headache</h6>
+        <h6><input type="radio" name="q8" value="c"> C. No Headache</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having Chest Pain:</h4>
+        <h6><input type="radio" name="q9" value="a"> A. Yes, Severe Chest Pain</h6>
+        <h6><input type="radio" name="q9" value="b"> B. Yes, Mild Chest Pain</h6>
+        <h6><input type="radio" name="q9" value="c"> C. No Chest Pain</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Are you having any previous disease like sugar/cancer/heart problems:</h4>
+        <h6><input type="radio" name="q10" value="a"> A. Yes</h6>
+        <h6><input type="radio" name="q10" value="b"> C. No</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ Do you feel like Vomiting:</h4>
+        <h6><input type="radio" name="q11" value="a"> A. Yes</h6>
+        <h6><input type="radio" name="q11" value="b"> C. No</h6>
+      </div>
+      <hr>
+      <div>
+        <h4>➜ What is your Oxygen Level:</h4>
+        <h6><input type="radio" name="q12" value="a"> A. Between 90 to 100</h6>
+        <h6><input type="radio" name="q12" value="b"> B. Between 60 to 90</h6>
+        <h6><input type="radio" name="q12" value="c"> C. Less than 60</h6>
+      </div>
+      <hr>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <input type="button" class="btn btn-outline-primary btn-lg" name="" value="Submit" onclick="check()">
+      </div>
+    </div>
+  </form>
+  <br>
+  <br>
+  <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: rgb(28, 76, 131);">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Dedicated to Fronline Workers, Nurses, Doctors and all Corona Warriors!</span>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgb(28, 76, 131);">
+        © 2021 Copyright:
+        <a class="text-white" href="https://covid19-detection.netlify.app/">COVID Detection Tool</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>
